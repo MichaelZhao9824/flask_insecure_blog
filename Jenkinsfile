@@ -44,7 +44,7 @@ pipeline {
         }
         stage('Monitoring') {
             steps {
-                sh 'curl -X POST -H "Content-Type: application/json" -d '{"text": "App deployed in PROD"}' https://example.com/mock-alert'
+                sh 'curl -X POST -H "Content-Type: application/json" -d '{"text": "App deployed in PROD"}' http://localhost:5000/health'
             }
         }
     }
